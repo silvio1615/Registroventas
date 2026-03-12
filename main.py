@@ -10,7 +10,7 @@ while continuar.lower() == "s":
 
 sales_summary(sales)
 show_sales(sales)
-
+print("thank you for using the sales registration system")
 
 
 
