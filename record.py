@@ -1,4 +1,5 @@
 
+
 def register_product():
     # Función para registrar un producto
     print("Bienvenido al sistema de registro de ventas")
@@ -21,7 +22,7 @@ def show_sales(sales):
     # if the list is empty,notify the user that no sales have been recorded, otherwise print the details of each sale
     if not sales:
         print("no sales recorded.")
-
+        print("thank you for using the sales registration system.")
         for sale in sales:
             print(f"product:{sale['product']}")
             print(f"price:{sale['price']}")
