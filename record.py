@@ -1,14 +1,13 @@
-
-
 def register_product():
-    # Función para registrar un producto
-    print("Bienvenido al sistema de registro de ventas")
-    print("Ingrese los datos del producto que desea registrar")
-    product = (input("Ingrese el nombre del producto: "))
-    quantity = int(input("Ingrese la cantidad del producto: "))
-    price = float(input("Ingrese el precio del producto: "))
-#    
+    # ask the user for the product name, quantity and price, calculate the total and return a dictionary with the sale details
+    print("welcome to the sales registration system")
+    print("please enter the product details")
+    
+    product = (input("enter the product name: "))
+    quantity = int(input("enter the product quantity: "))
+    price = float(input("enter the product price: "))
     total = price * quantity
+    # create a dictionary with the sale details and return it
     sale = {
         "product": product,
         "quantity": quantity,
@@ -22,18 +21,19 @@ def show_sales(sales):
     # if the list is empty,notify the user that no sales have been recorded, otherwise print the details of each sale
     if not sales:
         print("no sales recorded.")
-        print("thank you for using the sales registration system.")
+    else:
+        print("sales registered:")
         for sale in sales:
             print(f"product:{sale['product']}")
             print(f"price:{sale['price']}")
             print(f"quantity:{sale['quantity']}")
             print(f"total:{sale['total']}")
-
-
+            
+# use sales summary  parameterized with the sales list to sum all totals from every sale and print the total sales
 def sales_summary(sales):
-    # sum all totals from every sale and print the total sales
     total_sales = sum(sale["total"] for sale in sales)
     print(f"total of sales: {total_sales}")
+
 
 # def registro_producto():
 #     print("Bienvenido al sistema de registro de ventas")
